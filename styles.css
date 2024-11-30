@@ -79,14 +79,14 @@ button:hover {
     justify-content: center;
     align-items: center;
     position: relative;
-    width: 500px;
-    height: 500px;
+    width: 100%;
+    height: 100vh;
     background-color: black;
     z-index: 2; /* Foto berada di bawah hujan */
     padding: 0; /* Hilangkan padding agar foto benar-benar memenuhi area */
     border-radius: 10px;
-    box-shadow: 0 0 40px 10px rgb(255, 0, 179); /* Background glow di belakang foto */
     overflow: hidden; /* Pastikan gambar tidak keluar dari batas */
+    box-shadow: 0 0 40px 10px rgb(255, 0, 179); /* Glow latar belakang */
 }
 
 /* Foto dengan ukuran tetap 500x500px */
@@ -95,7 +95,7 @@ button:hover {
     height: 500px;
     object-fit: cover; /* Pastikan foto tetap proporsional */
     animation: zoomIn 2s ease-in-out; /* Menambahkan animasi zoomIn */
-    position: center;
+    position: relative;
     z-index: 1; /* Foto berada di atas latar glow */
 }
 
