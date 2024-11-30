@@ -1,0 +1,168 @@
+/* Styling untuk body */
+body {
+    background-color: black;
+    color: white;
+    font-family: 'Roboto Mono', monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Elemen konten */
+#content {
+    position: relative;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 3; /* Konten berada di atas hujan dan foto */
+}
+
+/* Efek ketikan */
+.typing-effect {
+    display: inline-block;
+    font-size: 30px;
+    color: white;
+    letter-spacing: 1px;
+    animation: typing 4s steps(40) 1s 1 normal both, glow 1.5s ease-in-out infinite alternate;
+}
+
+/* Efek ketikan */
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+/* Efek glow */
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 5px rgb(255, 0, 179), 0 0 10px rgb(255, 0, 179), 0 0 15px rgb(255, 0, 179), 0 0 20px rgb(255, 0, 179), 0 0 25px rgb(255, 0, 179), 0 0 30px rgb(255, 0, 179);
+    }
+    100% {
+        text-shadow: 0 0 10px rgb(255, 0, 179), 0 0 20px rgb(255, 0, 179), 0 0 30px rgb(255, 0, 179), 0 0 40px rgb(255, 0, 179), 0 0 50px rgb(255, 0, 179), 0 0 60px rgb(255, 0, 179);
+    }
+}
+
+/* Tombol "Lanjut" */
+button {
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+    padding: 8px 16px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-top: 20px;
+    display: none;
+    border-radius: 5px;
+    font-family: 'Roboto Mono', monospace;
+}
+
+/* Tombol hover */
+button:hover {
+    background-color: white;
+    color: black;
+}
+
+/* Animasi foto */
+#photo-animation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    z-index: 2; /* Foto berada di bawah hujan */
+}
+
+#photo-animation img {
+    max-width: 80%; /* Batasi lebar foto menjadi 80% dari lebar layar */
+    max-height: 80%; /* Batasi tinggi foto menjadi 80% dari tinggi layar */
+    width: auto;
+    height: auto;
+    animation: zoomIn 2s ease-in-out; /* Menambahkan animasi zoomIn */
+}
+
+/* Animasi Zoom In */
+@keyframes zoomIn {
+    from {
+        transform: scale(0); /* Awalnya kecil */
+        opacity: 0; /* Transparan */
+    }
+    to {
+        transform: scale(1); /* Ukuran penuh */
+        opacity: 1; /* Tampak sepenuhnya */
+    }
+}
+
+/* Animasi Hujan */
+.rain {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 3; /* Hujan di atas foto tapi di bawah konten */
+}
+
+.rain .drop {
+    position: absolute;
+    width: 2px;
+    height: 15px;
+    background-color: rgba(255, 0, 179, 0.5); /* Warna pink dengan transparansi */
+    animation: fall linear infinite;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(-100px); /* Mulai dari atas */
+    }
+    100% {
+        transform: translateY(100vh); /* Berhenti di bawah */
+    }
+}
+
+/* Media Queries untuk tampilan lebih responsif pada perangkat mobile */
+@media screen and (max-width: 768px) {
+    /* Menyesuaikan ukuran teks dan elemen pada layar kecil */
+    .typing-effect {
+        font-size: 24px;
+    }
+
+    #photo-animation img {
+        max-width: 90%; /* Membuat gambar sedikit lebih kecil di layar mobile */
+        max-height: 70%; /* Membatasi ukuran gambar lebih kecil */
+    }
+
+    button {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    /* Lebih menyesuaikan untuk tampilan ponsel dengan layar kecil */
+    .typing-effect {
+        font-size: 18px;
+    }
+
+    #photo-animation img {
+        max-width: 90%;
+        max-height: 60%;
+    }
+
+    button {
+        font-size: 10px;
+        padding: 4px 8px;
+    }
+}
