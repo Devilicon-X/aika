@@ -80,20 +80,13 @@ button:hover {
     align-items: center;
     width: 100%;
     height: 100vh;
-    background-color: black;
+    background-color: none;
 }
 
 #photo-animation img {
     width: 500px; /* Ukuran foto */
     height: 500px; /* Ukuran foto */
-    box-shadow: 0 0 30px rgba(255, 0, 179, 0.7); /* Efek glow di sekitar foto */
-    transition: box-shadow 0.3s ease; /* Efek transisi saat foto di hover */
 }
-
-#photo-animation img:hover {
-    box-shadow: 0 0 50px rgba(255, 0, 179, 1); /* Glow lebih besar saat hover */
-}
-
 
 /* Animasi Zoom In */
 @keyframes zoomIn {
