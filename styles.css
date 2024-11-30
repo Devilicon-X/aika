@@ -85,15 +85,18 @@ button:hover {
     z-index: 2; /* Foto berada di bawah hujan */
     padding: 0; /* Hilangkan padding agar foto benar-benar memenuhi area */
     border-radius: 10px;
-    box-shadow: 0 0 40px 10px rgb(255, 0, 179); /* Background glow */
+    box-shadow: 0 0 40px 10px rgb(255, 0, 179); /* Background glow di belakang foto */
     overflow: hidden; /* Pastikan gambar tidak keluar dari batas */
 }
 
-/* Foto dengan ukuran responsif */
+/* Foto dengan ukuran tetap 500x500px */
 #photo-animation img {
-    max-width: 100%;
-    height: auto;
+    width: 500px;
+    height: 500px;
+    object-fit: cover; /* Pastikan foto tetap proporsional */
     animation: zoomIn 2s ease-in-out; /* Menambahkan animasi zoomIn */
+    position: relative;
+    z-index: 1; /* Foto berada di atas latar glow */
 }
 
 /* Animasi Zoom In */
@@ -144,7 +147,7 @@ button:hover {
     }
 
     #photo-animation img {
-        width: 90%; /* Membuat gambar sedikit lebih kecil di layar mobile */
+        width: 80%; /* Membuat gambar sedikit lebih kecil di layar mobile */
         height: auto;
     }
 
@@ -161,7 +164,7 @@ button:hover {
     }
 
     #photo-animation img {
-        width: 90%;
+        width: 80%;
         height: auto;
     }
 
