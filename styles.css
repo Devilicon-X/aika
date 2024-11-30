@@ -89,9 +89,10 @@ button:hover {
     overflow: hidden; /* Pastikan gambar tidak keluar dari batas */
 }
 
+/* Foto dengan ukuran responsif */
 #photo-animation img {
-    width: 100%; /* Membuat gambar mengisi layar secara penuh */
-    height: auto; /* Menjaga proporsi gambar */
+    max-width: 100%;
+    height: auto;
     animation: zoomIn 2s ease-in-out; /* Menambahkan animasi zoomIn */
 }
 
