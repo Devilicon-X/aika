@@ -90,10 +90,8 @@ button:hover {
 }
 
 #photo-animation img {
-    max-width: 90%; /* Membatasi ukuran gambar agar tidak terlalu besar */
-    max-height: 80%; /* Membatasi ukuran gambar agar tidak terlalu besar */
-    width: auto;
-    height: auto;
+    width: 100%; /* Membuat gambar mengisi layar secara penuh */
+    height: auto; /* Menjaga proporsi gambar */
     animation: zoomIn 2s ease-in-out; /* Menambahkan animasi zoomIn */
 }
 
@@ -145,8 +143,8 @@ button:hover {
     }
 
     #photo-animation img {
-        max-width: 80%; /* Membuat gambar sedikit lebih kecil di layar mobile */
-        max-height: 70%; /* Membatasi ukuran gambar lebih kecil */
+        width: 90%; /* Membuat gambar sedikit lebih kecil di layar mobile */
+        height: auto;
     }
 
     button {
@@ -162,8 +160,8 @@ button:hover {
     }
 
     #photo-animation img {
-        max-width: 90%;
-        max-height: 60%;
+        width: 90%;
+        height: auto;
     }
 
     button {
