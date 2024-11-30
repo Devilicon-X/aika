@@ -146,9 +146,14 @@ button:hover {
         font-size: 24px;
     }
 
+    #photo-animation {
+        width: 80%; /* Membuat gambar sedikit lebih kecil di layar mobile */
+        height: 80%;
+    }
+    
     #photo-animation img {
         width: 80%; /* Membuat gambar sedikit lebih kecil di layar mobile */
-        height: auto;
+        height: 80%;
     }
 
     button {
@@ -163,9 +168,14 @@ button:hover {
         font-size: 18px;
     }
 
+    #photo-animation {
+        width: 80%; /* Membuat gambar sedikit lebih kecil di layar mobile */
+        height: 80%;
+    }
+    
     #photo-animation img {
         width: 80%;
-        height: auto;
+        height: 80%;
     }
 
     button {
