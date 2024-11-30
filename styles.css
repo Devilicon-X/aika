@@ -84,8 +84,8 @@ button:hover {
 }
 
 #photo-animation img {
-    width: 500px; /* Ukuran foto */
-    height: 500px; /* Ukuran foto */
+    width: auto; /* Ukuran foto */
+    height: auto; /* Ukuran foto */
 }
 
 /* Animasi Zoom In */
