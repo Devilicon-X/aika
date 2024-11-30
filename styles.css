@@ -95,7 +95,7 @@ button:hover {
     height: 500px;
     object-fit: cover; /* Pastikan foto tetap proporsional */
     animation: zoomIn 2s ease-in-out; /* Menambahkan animasi zoomIn */
-    position: relative;
+    position: center;
     z-index: 1; /* Foto berada di atas latar glow */
 }
 
